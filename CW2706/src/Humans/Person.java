@@ -1,15 +1,23 @@
-import java.util.Date;
+package Humans;
+
+import java.util.Calendar;
+import java.util.GregorianCalendar;
 
 public class Person {
+    static int count;
     String name;
     String surname;
-    Date bDay;
+    Calendar bDay;
     String phoneNumber;
     String address;
     String city;
     String country;
+    public Person(){
+        this("Jhon","Dou",new GregorianCalendar(2023,Calendar.JANUARY,1),"0",
+                "Unknown","Unknown","Unknown");
+    }
 
-    public Person(String name, String surname, Date bDay, String phoneNumber, String address, String city, String country) {
+    public Person(String name, String surname, Calendar bDay, String phoneNumber, String address, String city, String country) {
         this.name = name;
         this.surname = surname;
         this.bDay = bDay;
@@ -17,6 +25,7 @@ public class Person {
         this.address = address;
         this.city = city;
         this.country = country;
+        count++;
     }
 
     @Override
@@ -24,7 +33,7 @@ public class Person {
         return this.name + " " +
                 this.surname +
                 ", birth" +
-                this.bDay +
+                this.bDay.getTime() +
                 ", from " +
                 this.country +
                 ", " +
@@ -47,13 +56,13 @@ public class Person {
     public void setSurname(String surname) {
         this.surname = surname;
     }
-    public Date getbDay() {
+    public Calendar getbDay() {
         return bDay;
     }
-    public void setbDay(Date bDay) {
+    public void setbDay(Calendar bDay) {
         this.bDay = bDay;
     }
-    public String getPhoneNubmer() {
+    public String getPhoneNumber() {
         return phoneNumber;
     }
     public void setPhoneNubmer(String phoneNumber) {
@@ -76,5 +85,8 @@ public class Person {
     }
     public void setCountry(String country) {
         this.country = country;
+    }
+    public static int getCount() {
+        return count;
     }
 }
