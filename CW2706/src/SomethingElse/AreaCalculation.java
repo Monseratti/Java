@@ -1,3 +1,5 @@
+package SomethingElse;
+
 public class AreaCalculation {
     public static double TriangleArea(double base, double height){
         return (base*height)/2;

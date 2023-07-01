@@ -1,3 +1,5 @@
+package SomethingElse;
+
 public class SimpleMath {
     public static int Max(int a, int b, int c, int d){
         int[] arr = new int[] {

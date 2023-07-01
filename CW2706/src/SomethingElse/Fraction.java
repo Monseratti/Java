@@ -1,3 +1,5 @@
+package SomethingElse;
+
 public class Fraction {
     int num;
     int denum;

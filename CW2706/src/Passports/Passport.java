@@ -51,4 +51,11 @@ public class Passport {
     public void setStateRegistrationBody(String stateRegistrationBody) {
         this.stateRegistrationBody = stateRegistrationBody;
     }
+
+    @Override
+    public String toString() {
+        return "Passport ID is '" + passportID + '\'' +
+                ", owner " + owner +
+                ", state registration body " + stateRegistrationBody + '\'';
+    }
 }

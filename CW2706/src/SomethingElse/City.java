@@ -1,3 +1,5 @@
+package SomethingElse;
+
 public class City {
     String name;
     String region;
@@ -15,7 +17,7 @@ public class City {
     }
     @Override
     public String toString() {
-        return "City name is" + name +
+        return "SomethingElse.City name is" + name +
                 ", region " + region +
                 ", country " + country +
                 ", populations " + numberOfPopulation +

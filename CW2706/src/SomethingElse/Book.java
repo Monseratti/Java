@@ -1,3 +1,5 @@
+package SomethingElse;
+
 import java.util.Date;
 
 public class Book {
@@ -21,7 +23,7 @@ public class Book {
     }
     @Override
     public String toString() {
-        return "Book title is '" + title + '\'' +
+        return "SomethingElse.Book title is '" + title + '\'' +
                 ", author '" + authorName + " " + authorSurname + '\'' +
                 ", published at " + published +
                 ", publisherName is '" + publisherName + '\'' +

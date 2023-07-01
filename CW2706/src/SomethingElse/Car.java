@@ -1,3 +1,5 @@
+package SomethingElse;
+
 import java.util.Date;
 
 public class Car {
@@ -14,7 +16,7 @@ public class Car {
     }
     @Override
     public String toString() {
-        return "Car model '" + model + '\'' +
+        return "SomethingElse.Car model '" + model + '\'' +
                 ", mark '" + mark + '\'' +
                 ", production at " + productionAt +
                 ", enginePower is " + enginePower;

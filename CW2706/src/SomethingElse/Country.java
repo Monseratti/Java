@@ -1,3 +1,5 @@
+package SomethingElse;
+
 import java.util.Arrays;
 
 public class Country {
@@ -19,7 +21,7 @@ public class Country {
 
     @Override
     public String toString() {
-        return "Country name is '" + name + '\'' +
+        return "SomethingElse.Country name is '" + name + '\'' +
                 ", at continent '" + continent + '\'' +
                 ", population " + numberOfPopulation +
                 ", phoneCode '" + phoneCode + '\'' +
