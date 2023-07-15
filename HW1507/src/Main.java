@@ -167,7 +167,8 @@ public class Main {
         List<Device> devicesByYearRange = devices.stream()
                 .filter(d -> d.year() >= startDeviceYear && d.year() <= endDeviceYear)
                 .toList();
-        System.out.println("Пристрої, рік випуску яких входить в діапазон " + startDeviceYear + " - " + endDeviceYear + ": " + devicesByYearRange);
+        System.out.println("Пристрої, рік випуску яких входить в діапазон "
+                + startDeviceYear + " - " + endDeviceYear + ": " + devicesByYearRange);
         System.out.println();
 
         // Завдання 4: Робота зі списком проекторів
