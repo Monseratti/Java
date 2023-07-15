@@ -46,7 +46,7 @@ public class Main {
         Scanner scanner = new Scanner(System.in);
 
         // Завдання 1: Робота зі списком цілих чисел
-        List<Integer> numbers = new Random().ints(20, -99, 100)
+        List<Integer> numbers = new Random().ints(50, -2000, 2000)
                 .boxed()
                 .toList();
 
@@ -68,14 +68,16 @@ public class Main {
                 .count();
         System.out.println("Кількість двозначних чисел: " + countTwoDigit);
 
-        long countMirrorNumbers = numbers.stream()
+        List<Integer> mirrorNumbers = numbers.stream()
                 .filter(n -> {
-                    String numberString = String.valueOf(n);
+                    String numberString = String.valueOf(Math.abs(n));
                     String reversedNumberString = new StringBuilder(numberString).reverse().toString();
-                    return numberString.equals(reversedNumberString);
+                    return numberString.length() > 1 && numberString.equals(reversedNumberString);
                 })
-                .count();
-        System.out.println("Кількість дзеркальних чисел: " + countMirrorNumbers);
+                .toList();
+        System.out.println("Дзеркальні числа (крім однозначних): " + mirrorNumbers);
+        System.out.println("Кількість дзеркальних чисел (крім однозначних): " + mirrorNumbers.size());
+
         System.out.println();
 
         // Завдання 2: Робота зі списком продуктів
