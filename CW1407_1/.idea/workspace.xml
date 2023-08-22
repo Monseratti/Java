@@ -9,28 +9,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bee28644-9e61-47ca-91c9-cf1fc3c8176a" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.mvn/wrapper/maven-wrapper.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.mvn/wrapper/maven-wrapper.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mvnw" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mvnw.cmd" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/classes/Buyer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/classes/Order.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/classes/Product.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/classes/Seller.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/connectors/ConnectDB.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/servlets/Sells.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/buyers.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/index.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/products.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/sellers.jsp" afterDir="false" />
+    <list default="true" id="bee28644-9e61-47ca-91c9-cf1fc3c8176a" name="Changes" comment="commit">
+      <change afterPath="$PROJECT_DIR$/../CW1508/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../CW1508/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../CW1508/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../CW1508/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../CW1508/src/main/java/com/example/cw1508/FindNumber.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../CW1508/src/main/java/com/example/cw1508/MultiplyServlet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../CW1508/src/main/webapp/multiplytable.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -75,7 +62,6 @@
   "keyToString": {
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
     "git-widget-placeholder": "main",
     "ignore.virus.scanning.warn.message": "true",
@@ -196,11 +182,27 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1692529808790</updated>
-      <workItem from="1692529809970" duration="5141000" />
+      <workItem from="1692529809970" duration="5767000" />
+      <workItem from="1692536416748" duration="70000" />
+      <workItem from="1692536792931" duration="621000" />
+      <workItem from="1692633908680" duration="174000" />
     </task>
+    <task id="LOCAL-00001" summary="commit">
+      <option name="closed" value="true" />
+      <created>1692535890690</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1692535890690</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="commit" />
+    <option name="LAST_COMMIT_MESSAGE" value="commit" />
   </component>
 </project>
