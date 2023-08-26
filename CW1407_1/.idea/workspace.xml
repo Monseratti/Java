@@ -10,14 +10,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="bee28644-9e61-47ca-91c9-cf1fc3c8176a" name="Changes" comment="commit">
-      <change afterPath="$PROJECT_DIR$/../CW1508/.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../CW1508/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../CW1508/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../CW1508/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../CW1508/src/main/java/com/example/cw1508/FindNumber.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../CW1508/src/main/java/com/example/cw1508/MultiplyServlet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../CW1508/src/main/webapp/multiplytable.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../CW2108/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../CW2108/.idea/dataSources.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../CW2108/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../CW2108/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../CW2108/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../CW2108/src/main/java/connectors/ConnectDB.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -65,7 +63,7 @@
     "WebServerToolWindowFactoryState": "false",
     "git-widget-placeholder": "main",
     "ignore.virus.scanning.warn.message": "true",
-    "last_opened_file_path": "D:/Studies/Java/HW1408",
+    "last_opened_file_path": "D:/Studies/Java/CW1407_1",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -186,6 +184,7 @@
       <workItem from="1692536416748" duration="70000" />
       <workItem from="1692536792931" duration="621000" />
       <workItem from="1692633908680" duration="174000" />
+      <workItem from="1692725418229" duration="154000" />
     </task>
     <task id="LOCAL-00001" summary="commit">
       <option name="closed" value="true" />

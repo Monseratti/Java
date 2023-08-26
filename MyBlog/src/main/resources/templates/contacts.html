@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title th:text="${title}"/>
+  <!--  cdn bootstrap  -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+        crossorigin="anonymous">
+
+</head>
+<body>
+<header th:insert="sections/header :: header"/>
+<div class="container">
+    <h1 th:text="${text}"></h1>
+</div>
+<!--footer-->
+<footer th:insert="sections/footer :: footer" class="page-footer font-small blue pt-4"/>
+
+</body>
+</html>
