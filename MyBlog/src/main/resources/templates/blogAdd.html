@@ -2,15 +2,22 @@
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
-    <title>My Blog</title>
-    <!--  cdn bootstrap  -->
+    <title>Add post</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
           crossorigin="anonymous">
 </head>
 <body>
 <header th:insert="sections/header :: header"/>
-
+<form class="form" method="post">
+    <input class="form-control" name="title" placeholder="Title"/>
+    <textarea class="form-control" name="shortDescription"
+              placeholder="Short description"></textarea>
+    <textarea class="form-control" name="content"
+              placeholder="Content"></textarea>
+    <input type="submit" class="btn btn-outline-success" value="Save"/>
+</form>
 <!--footer-->
 <footer th:insert="sections/footer :: footer" class="page-footer font-small blue pt-4"/>
+
 </body>
 </html>

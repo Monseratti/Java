@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <title>Edit post</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+        crossorigin="anonymous">
+</head>
+<body>
+<header th:insert="sections/header :: header"/>
+<form th:action="@{/blog/{id}/edit(id=${post.id})}" class="form" method="post">
+  <input type="hidden" name="id" th:value="${post.id}">
+  <input class="form-control" name="title" placeholder="Title" th:value="${post.title}"/>
+  <textarea class="form-control" name="shortDescription"
+            placeholder="Short description" th:text="${post.title}"></textarea>
+  <textarea class="form-control" name="content"
+            placeholder="Content" th:text="${post.title}"></textarea>
+  <input type="submit" class="btn btn-outline-success" value="Edit"/>
+</form>
+<!--footer-->
+<footer th:insert="sections/footer :: footer" class="page-footer font-small blue pt-4"/>
+
+</body>
+</html>
