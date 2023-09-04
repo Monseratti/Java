@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Books</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+          crossorigin="anonymous">
+</head>
+<body>
+<!--header-->
+<header th:insert="sections/header :: header"/>
+<!--body-->
+<body>
+<a href="/books/add" class="btn btn-primary">Add new book</a>
+<!--generate search form-->
+<form action="/books/search" method="get" class="form-inline my-2 my-lg-0">
+    <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" name="search">
+    <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+</form>
+<!--books table-->
+<table class="table table-striped">
+    <thead>
+    <tr>
+        <th scope="col">Title</th>
+        <th scope="col">Author</th>
+        <th scope="col">Published</th>
+        <th scope="col">Actions</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="book : ${books}">
+        <td><a th:href="@{/books/{id}(id=${book.id})}" th:text="${book.title}" ></a></td>
+        <td th:text="${book.author}"></td>
+        <td th:text="${book.published}"></td>
+        <td>
+            <a th:href="@{/books/edit/{id}(id=${book.id})}" class="btn btn-info">Edit</a>
+            <a th:href="@{/books/delete/{id}(id=${book.id})}" class="btn btn-danger">Delete</a>
+        </td>
+    </tr>
+    </tbody>
+</table>
+</body>
+<!--footer-->
+<footer th:insert="sections/footer :: footer"/>
+</body>
+</html>
