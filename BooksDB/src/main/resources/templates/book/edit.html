@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Edit book</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+          crossorigin="anonymous">
+</head>
+<body>
+<!--header-->
+<header th:insert="sections/header :: header"/>
+<!--body-->
+<body>
+<!--generate form to create book-->
+<form method="post" th:action="@{/books/edit/{id}(id=${book.id})}" th:object="${book}">
+    <div class="form-group">
+        <label for="title">Title</label>
+        <input type="text" class="form-control" th:field="*{title}" id="title" placeholder="Enter book title">
+    </div>
+    <div class="form-group">
+        <label for="author">Author</label>
+        <input type="text" class="form-control" th:field="*{author}" id="author" placeholder="Enter book author">
+    </div>
+    <div class="form-group">
+        <label for="published">Published</label>
+        <input type="date" class="form-control" th:field="*{published}" id="published"
+               placeholder="Enter book published">
+    </div>
+    <div class="form-group">
+        <label for="author">Genre</label>
+        <input type="text" class="form-control" th:field="*{jenre}" id="genre" placeholder="Enter book genre">
+    </div>
+    <div class="form-group">
+        <label for="author">Pages</label>
+        <input type="number" class="form-control" th:field="*{pages}" id="pages"
+               placeholder="Enter amount of pages of the book">
+    </div>
+    <div class="form-group">
+        <label for="description">Description</label>
+        <textarea class="form-control" th:field="*{description}" id="description"
+                  placeholder="Enter book description"></textarea>
+    </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+</form>
+</body>
+<!--footer-->
+<footer th:insert="sections/footer :: footer"/>
+</body>
+</html>
