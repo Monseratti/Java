@@ -9,10 +9,10 @@ public class Rent {
     @GeneratedValue
     private Long id;
     @ManyToOne
-    @JoinColumn(name = "id", nullable = false)
-    private User tenant;
+    @JoinColumn(name = "user_id", nullable = false, insertable = false, updatable = false)
+    private BookingUser tenant;
     @ManyToOne
-    @JoinColumn(name = "id", nullable = false)
+    @JoinColumn(name = "room_id", nullable = false, insertable = false, updatable = false)
     private Room room;
     private LocalDate startDate;
     private LocalDate endDate;
@@ -20,7 +20,7 @@ public class Rent {
     public Rent() {
     }
 
-    public Rent(User tenant, Room room, LocalDate startDate, LocalDate endDate) {
+    public Rent(BookingUser tenant, Room room, LocalDate startDate, LocalDate endDate) {
         this.tenant = tenant;
         this.room = room;
         this.startDate = startDate;
@@ -35,11 +35,11 @@ public class Rent {
         return id;
     }
 
-    public User getTenant() {
+    public BookingUser getTenant() {
         return tenant;
     }
 
-    public void setTenant(User tenant) {
+    public void setTenant(BookingUser tenant) {
         this.tenant = tenant;
     }
 

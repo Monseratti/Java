@@ -1,15 +1,14 @@
 package com.booking.models;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.Id;
-import jakarta.persistence.OneToMany;
+import jakarta.persistence.*;
+
 import java.util.List;
 
 @Entity
-public class User {
+public class BookingUser {
     @Id
     @GeneratedValue
+    @Column(name = "id_user")
     private Long id;
     private String name;
     private String email;
@@ -20,10 +19,10 @@ public class User {
     @OneToMany(mappedBy = "tenant")
     private List<Rent> rents;
 
-    public User() {
+    public BookingUser() {
     }
 
-    public User(String name, String email, String password, String role, List<Room> rooms, List<Rent> rents) {
+    public BookingUser(String name, String email, String password, String role, List<Room> rooms, List<Rent> rents) {
         this.name = name;
         this.email = email;
         this.password = password;
