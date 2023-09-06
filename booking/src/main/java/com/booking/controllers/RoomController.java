@@ -12,14 +12,18 @@ import org.springframework.web.bind.annotation.*;
 public class RoomController {
     @Autowired
     private RoomRepository roomRepository;
+    private final String action = "rooms";
+
     @GetMapping("/")
     public String index(Model model) {
         model.addAttribute("rooms", roomRepository.findAll());
+        model.addAttribute("action", action);
         return "rooms/index";
     }
     @GetMapping("/create")
     public String create(Model model) {
         model.addAttribute("room", new Room());
+        model.addAttribute("action", action);
         return "rooms/create";
     }
     @PostMapping("/create")
@@ -32,6 +36,7 @@ public class RoomController {
         var room = roomRepository.findById(id);
         if(room.isEmpty()) return "redirect:/rooms/";
         model.addAttribute("room", room.get());
+        model.addAttribute("action", action);
         return "rooms/detail";
     }
     @GetMapping("/{id}/edit")
@@ -39,6 +44,7 @@ public class RoomController {
         var room = roomRepository.findById(id);
         if(room.isEmpty()) return "redirect:/rooms/";
         model.addAttribute("room", room.get());
+        model.addAttribute("action", action);
         return "rooms/edit";
     }
     @PostMapping("/{id}/edit")

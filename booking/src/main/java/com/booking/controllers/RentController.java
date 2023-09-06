@@ -15,14 +15,17 @@ import org.springframework.web.bind.annotation.RequestMapping;
 public class RentController {
     @Autowired
     private RentRepository rentRepository;
+    private final String action = "rents";
     @GetMapping("/")
     public String index(Model model) {
         model.addAttribute("rents", rentRepository.findAll());
+        model.addAttribute("action", action);
         return "rents/index";
     }
     @GetMapping("/create")
     public String create(Model model) {
         model.addAttribute("rent", new Rent());
+        model.addAttribute("action", action);
         return "rents/create";
     }
     @PostMapping("/create")
@@ -35,6 +38,7 @@ public class RentController {
         var rent = rentRepository.findById(id);
         if (rent.isEmpty()) return "redirect:/rents/";
         model.addAttribute("rent", rent.get());
+        model.addAttribute("action", action);
         return "rents/detail";
     }
     @GetMapping("/{id}/edit")
@@ -42,6 +46,7 @@ public class RentController {
         var rent = rentRepository.findById(id);
         if (rent.isEmpty()) return "redirect:/rents/";
         model.addAttribute("rent", rent.get());
+        model.addAttribute("action", action);
         return "rents/edit";
     }
     @PostMapping("/{id}/edit")
@@ -50,10 +55,10 @@ public class RentController {
         return "redirect:/rents/";
     }
     @PostMapping("/{id}/delete")
-    public String delete(Model model, @PathVariable(name="id") Long id) {
+    public String delete(@PathVariable(name="id") Long id) {
         var rent = rentRepository.findById(id);
         if (rent.isEmpty()) return "redirect:/rents/";
-        model.addAttribute("rent", rent.get());
+        rentRepository.delete(rent.get());
         return "redirect:/rents/";
     }
 }

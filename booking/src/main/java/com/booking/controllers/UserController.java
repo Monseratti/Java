@@ -15,14 +15,17 @@ import org.springframework.web.bind.annotation.RequestMapping;
 public class UserController {
     @Autowired
     private UserRepository userRepository;
+    private final String action = "users";
     @GetMapping("/")
     public String index(Model model) {
         model.addAttribute("users", userRepository.findAll());
+        model.addAttribute("action", action);
         return "users/index";
     }
     @GetMapping("/create")
     public String create(Model model) {
         model.addAttribute("user", new BookingUser());
+        model.addAttribute("action", action);
         return "users/create";
     }
     @PostMapping("/create")
@@ -35,6 +38,7 @@ public class UserController {
         var user = userRepository.findById(id);
         if(user.isEmpty()) return "redirect:/users/";
         model.addAttribute("user", user.get());
+        model.addAttribute("action", action);
         return "users/detail";
     }
     @GetMapping("/{id}/edit")
@@ -42,6 +46,7 @@ public class UserController {
         var user = userRepository.findById(id);
         if(user.isEmpty()) return "redirect:/users/";
         model.addAttribute("user", user.get());
+        model.addAttribute("action", action);
         return "users/edit";
     }
     @PostMapping("/{id}/edit")

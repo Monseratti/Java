@@ -7,12 +7,11 @@ import java.util.List;
 public class Room {
     @Id
     @GeneratedValue
-    @Column(name = "room_id")
     private Long id;
     private String name;
     private String description;
     @ManyToOne
-    @JoinColumn(name = "id_user", nullable = false, insertable = false, updatable = false)
+    @JoinColumn(name = "user_id", nullable = false, insertable = false, updatable = false)
     private BookingUser owner;
     @OneToMany(mappedBy = "room")
     private List<Rent> rents;

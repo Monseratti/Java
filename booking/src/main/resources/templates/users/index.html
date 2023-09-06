@@ -1,19 +1,28 @@
-<!DOCTYPE html>
-<html lang="en" xmlns:th="http://www.thymeleaf.org">
-<head>
-    <meta charset="UTF-8">
-    <title>Users</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
-          crossorigin="anonymous">
-</head>
-<body>
-<!--header-->
-<header th:insert="sections/header :: header"></header>
-<!--body-->
-<body>
-
-</body>
-<!--footer-->
-<footer th:insert="sections/footer :: footer"></footer>
-</body>
-</html>
+<div layout:decorate="~{sections/layout}" layout:fragment="content" xmlns:layout="http://www.w3.org/1999/xhtml">
+    <a th:href="@{/users/create}" class="btn btn-outline-primary mb-3">Create</a>
+    <!--users table-->
+    <table class="table table-dark">
+        <thead>
+        <tr>
+            <th scope="col">Name</th>
+            <th scope="col">Email</th>
+            <th scope="col">Role</th>
+            <th scope="col">Actions</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr th:each="user : ${users}">
+            <td><a th:href="@{/users/{id}(id=${user.id})}" th:text="${user.name}"></a></td>
+            <td th:text="${user.email}"></td>
+            <td th:text="${user.role}"></td>
+            <td class="d-flex">
+                <a th:href="@{/users/{id}/edit(id=${user.id})}" class="btn btn-outline-warning">Edit</a>
+                <form th:action="@{/users/{id}/delete(id=${user.id})}" method="post">
+                    <button type="submit" class="btn btn-outline-danger">Delete</button>
+                </form>
+            </td>
+        </tr>
+        </tbody>
+    </table>
+    <!--end users table-->
+</div>

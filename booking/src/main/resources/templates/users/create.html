@@ -1,19 +1,26 @@
-<!DOCTYPE html>
-<html lang="en" xmlns:th="http://www.thymeleaf.org">
-<head>
-    <meta charset="UTF-8">
-    <title>Create user</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
-          crossorigin="anonymous">
-</head>
-<body>
-<!--header-->
-<header th:insert="sections/header :: header"></header>
-<!--body-->
-<body>
-
-</body>
-<!--footer-->
-<footer th:insert="sections/footer :: footer"></footer>
-</body>
-</html>
+<div layout:decorate="~{sections/layout}" layout:fragment="content" xmlns:layout="http://www.w3.org/1999/xhtml">
+    <form class="form" th:action="@{/users/create}" method="post" th:object="${user}">
+        <div class="form-group">
+            <label for="name">Name</label>
+            <input class="form-control" id="name" th:field="*{name}" type="text" />
+        </div>
+        <div class="form-group">
+            <label for="email">Email</label>
+            <input class="form-control" id="email" th:field="*{email}" type="text" />
+        </div>
+        <div class="form-group">
+            <label for="password">Password</label>
+            <input class="form-control" id="password" th:field="*{password}" type="password" />
+        </div>
+        <div class="form-group">
+            <label for="role">Role</label>
+            <select class="form-control" id="role" th:field="*{role}">
+                <option value="tenant">Tenant</option>
+                <option value="owner">Owner</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <button class="btn btn-outline-primary" type="submit">Create</button>
+        </div>
+    </form>
+</div>

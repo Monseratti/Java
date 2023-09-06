@@ -8,7 +8,6 @@ import java.util.List;
 public class BookingUser {
     @Id
     @GeneratedValue
-    @Column(name = "id_user")
     private Long id;
     private String name;
     private String email;
