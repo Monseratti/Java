@@ -13,7 +13,7 @@ public class BookingUser {
     private String email;
     private String password;
     private String role;
-    @OneToMany(mappedBy = "owner")
+    @OneToMany(mappedBy = "userId")
     private List<Room> rooms;
     @OneToMany(mappedBy = "tenant")
     private List<Rent> rents;
