@@ -11,18 +11,18 @@ public class Room {
     private String name;
     private String description;
     @ManyToOne
-    @JoinColumn(name = "user_id",nullable = false, insertable = false, updatable = false)
-    private BookingUser userId;
+    @JoinColumn(name = "user_id",nullable = false)
+    private BookingUser owner;
     @OneToMany(mappedBy = "room")
     private List<Rent> rents;
 
     public Room() {
     }
 
-    public Room(String name, String description, BookingUser userId, List<Rent> rents) {
+    public Room(String name, String description, BookingUser owner, List<Rent> rents) {
         this.name = name;
         this.description = description;
-        this.userId = userId;
+        this.owner = owner;
         this.rents = rents;
     }
 
@@ -50,12 +50,12 @@ public class Room {
         this.description = description;
     }
 
-    public BookingUser getUserId() {
-        return userId;
+    public BookingUser getOwner() {
+        return owner;
     }
 
-    public void setUserId(BookingUser owner) {
-        this.userId = owner;
+    public void setOwner(BookingUser owner) {
+        this.owner = owner;
     }
 
     public List<Rent> getRents() {

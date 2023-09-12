@@ -1,3 +1,29 @@
 <div layout:decorate="~{sections/layout}" layout:fragment="content" xmlns:layout="http://www.w3.org/1999/xhtml">
-
+    <a th:href="@{/rents/setDates}" class="btn btn-outline-success">Create new rent</a>
+    <!--generate rooms table-->
+    <table class="table table-striped">
+        <thead>
+        <tr>
+            <th>Room name</th>
+            <th>Beginning date</th>
+            <th>Ending date</th>
+            <th>Tenant</th>
+            <th>Actions</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr th:each="rent : ${rents}">
+            <td><a th:href="@{/rents/{id}(id=${rent.id})}" th:text="${rent.room.name}"></a></td>
+            <td th:text="${rent.startDate}"></td>
+            <td th:text="${rent.endDate}"></td>
+            <td th:text="${rent.tenant.name}"></td>
+            <td class="d-flex">
+                <a th:href="@{/rents/{id}/edit(id=${rent.id})}" class="btn btn-outline-warning">Edit</a>
+                <form th:action="@{/rents/{id}/delete(id=${rent.id})}" method="post">
+                    <button type="submit" class="btn btn-outline-danger">Delete</button>
+                </form>
+            </td>
+        </tr>
+        </tbody>
+    </table>
 </div>

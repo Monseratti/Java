@@ -1,6 +1,8 @@
 package com.booking.models;
 
 import jakarta.persistence.*;
+import org.springframework.format.annotation.DateTimeFormat;
+
 import java.time.LocalDate;
 
 @Entity
@@ -9,12 +11,14 @@ public class Rent {
     @GeneratedValue
     private Long id;
     @ManyToOne
-    @JoinColumn(name = "user_id", nullable = false, insertable = false, updatable = false)
+    @JoinColumn(name = "user_id", nullable = false)
     private BookingUser tenant;
     @ManyToOne
-    @JoinColumn(name = "room_id", nullable = false, insertable = false, updatable = false)
+    @JoinColumn(name = "room_id", nullable = false)
     private Room room;
+    @DateTimeFormat(pattern = "yyyy-MM-dd")
     private LocalDate startDate;
+    @DateTimeFormat(pattern = "yyyy-MM-dd")
     private LocalDate endDate;
 
     public Rent() {
